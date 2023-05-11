@@ -16,6 +16,10 @@ function Counter() {
         return count+"heyy";
     },[count])
 
+    const funny = useMemo(()=>{
+      return "hahahahheheheh";
+    },[])
+
     const handleOnClickTwo = ()=>{
         setCountTwo(countTwo+1)
     }
@@ -26,7 +30,7 @@ function Counter() {
       <button onClick={handleOnClick}>Add: {count}</button>
       <h4>{hello}</h4>
       <button onClick={handleOnClickTwo}>Add2: {countTwo}</button>
-      <Child/>
+      <Child funny = {funny}/>
     </div>
   )
 }
