@@ -1,12 +1,13 @@
 import React from 'react'
+import { memo } from 'react';
 
 function Child() {
     console.log("rendering");
   return (
     <div>
-      <h1>Hello</h1>
+      <h3>Hello</h3>
     </div>
   )
 }
 
-export default Child
+export default memo(Child);
